@@ -1,3 +1,60 @@
+#Midjourney_api 非官方的Midjourney API
+
+##这是一个定制的Midjourney API，您可以使用它通过代码生成图像。使用Discord API进行工作。
+
+###!!请记住，Midjourney的服务条款不允许任何自动化操作，所以这个项目仅限于研究目的！！
+
+#包含内容：
+
+##Sender：用于向Midjourney发送提示信息 Receiver：在终端中工作，将所有已完成的图像下载到本地文件夹 安装：
+
+###创建Discord帐户并创建您的服务器（指南在这里：https://discord.com/blog/starting-your-first-discord-server） 创建Midjourney账户并将Midjourney Bot邀请到您的服务器（指南在这里：https://docs.midjourney.com/docs/invite-the-bot） 确保生成在您的服务器上正常工作 在Chrome浏览器中登录Discord，在您的服务器文本频道中，点击右上角的三个点，然后选择更多工具，再选择开发者工具。选择Network选项卡，您将看到页面的所有网络活动。 现在在您的文本频道中键入任何提示信息，按回车键发送带有提示信息的消息后，您将在网络活动中看到一个名为“interaction”的新行。点击它，选择Payload选项卡，您将看到payload_json - 这就是我们需要的！复制channelid、application_id、guild_id、session_id、version和id的值，稍后我们将需要它们。然后从Payload选项卡切换到Headers选项卡，找到“authorization”字段，也将其值复制。 克隆此存储库 打开“sender_params.json”文件，并将第5段中的所有值放入其中。还填写'flags'字段以指定提示信息的特殊标志 现在，您准备运行文件了： 要启动接收器脚本，请打开终端并输入：python /path/to/cloned/dir/receiver.py --params /path/to/cloned/dir/sender_params.json --local_path '/path/to/folder/for/downloading/images' 此脚本将显示所有的生成过程，并在准备好后立即下载图像 要发送提示信息进行生成，请打开另一个终端并输入：python //path/to/cloned/dir/sender.py --params /path/to/cloned/dir/sender_params.json --prompt 'your prompt here' 尽情享受吧 :) 请注意，控制并行请求的数量 - 正常和最快工作的数量不应超过3（在基础和标准计划中是3，在专业计划中是12）。
+
+#项目说明：
+
+##这是第一个简单版本的API，现在我正在开发下一个版本，其中包括：
+
+##本地队列控制器 能够与任意数量的Midjourney账户同时使用，以获得更好和可扩展的性能 升采样脚本以发送升采样请求 以及其他很多功能 联系方式：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Midjourney_api
 unofficial Midjourney API
 
